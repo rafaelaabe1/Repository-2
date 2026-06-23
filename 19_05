@@ -1,0 +1,229 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNXQpw4MH12rXoMf1gjEAr/",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/rafaelaabe1/Repository-2/blob/main/19_05\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Laços e Iterações**\n",
+        "\n",
+        "for - geralmente é ultilizado quando sabemos quantas vezes algo vai\n",
+        "se repetir.\n",
+        "\n",
+        "while - È usado quando não sabemos"
+      ],
+      "metadata": {
+        "id": "zR6Sd9en9Gx9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "senha = \"\"\n",
+        "\n",
+        "while senha != 1234:\n",
+        "  senha = int (input(\"Digite sua senha: \"))\n",
+        "  print (\"Senha Invalida!\")\n",
+        "\n",
+        "print (\"Acesso Liberado\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JFdeCI8E9XLc",
+        "outputId": "72846ff6-4f76-4345-fe25-771fd9c2a79e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite sua senha: 578\n",
+            "Senha Invalida!\n",
+            "Digite sua senha: 1234\n",
+            "Senha Invalida!\n",
+            "Acesso Liberado\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for i in range (5):\n",
+        "  print (i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QMLM16lQ-UI8",
+        "outputId": "4387c91a-44a6-49b4-f539-089fc8f87d17"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "contador = 0\n",
+        "\n",
+        "while contador < 5:\n",
+        "  print(contador)\n",
+        "  contador +=1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NqvREr4M-eLk",
+        "outputId": "cfa54b1f-3a6e-4b53-ee77-91f822d25a7a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Escrever um programa que faz uma contagem regressiva de 10 até 0.\n",
+        "\n",
+        "contador = 10\n",
+        "\n",
+        "while contador >= 0:\n",
+        "  print(contador)\n",
+        "  contador -= 1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pDE4OBjpA-Oj",
+        "outputId": "ef08786d-0fe2-4fff-e289-ab5639cfa066"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n",
+            "9\n",
+            "8\n",
+            "7\n",
+            "6\n",
+            "5\n",
+            "4\n",
+            "3\n",
+            "2\n",
+            "1\n",
+            "0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Escrever um programa que recebe 04 notas referente a cada bimestre e calcula a média das notas e imprimi a média do aluno e se ele foi aprovadfo, recuperação ou reprovado\n",
+        "\n",
+        "# Regras\n",
+        "\n",
+        "# Utilizar while\n",
+        "# Definir uma variavel para o bimestre e uma variavel para nota e uma variavel para o resultado.\n",
+        "\n",
+        "nota = 0\n",
+        "resultado = 0\n",
+        "bimestre = 1\n",
+        "\n",
+        "while bimestre <= 4:\n",
+        "  nota = float(input(f\"digite sua nota do {bimestre}º bimestre: \"))\n",
+        "  bimestre +=1\n",
+        "  resultado = resultado+nota\n",
+        "print(f\"sua media é: {resultado}\")\n",
+        "\n",
+        "media = resultado / 4\n",
+        "\n",
+        "if media >= 7:\n",
+        "  print(f\"Sua nota final foi {resultado}, você esta Aprovado\")\n",
+        "\n",
+        "elif media >= 5:\n",
+        "  print(f\"Sua nota final foi {resultado}, você esta de Recuperação\")\n",
+        "\n",
+        "else:\n",
+        "  print(f\"Sua nota final foi {resultado}, você esta Reprovado\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SgPWTWqwN4pG",
+        "outputId": "1145d068-c7a9-4d42-b22c-9165c8138c1c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "digite sua nota do 1º bimestre: 7\n",
+            "digite sua nota do 2º bimestre: 5\n",
+            "digite sua nota do 3º bimestre: 9\n",
+            "digite sua nota do 4º bimestre: 5\n",
+            "sua media é: 26.0\n",
+            "Sua nota final foi 26.0, você esta de Recuperação\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
